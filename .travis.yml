@@ -7,8 +7,8 @@ jobs:
     include:
         - stage: tests
           name: "Unit Tests"
-          script: ./test-ci
+          script: npm run test-ci
         - stage: deploy
           name: "Deploy to GitHub Pages"
-          script: ./deploy
+          script: rnm run deploy
           if: branch = master
