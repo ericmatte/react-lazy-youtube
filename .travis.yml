@@ -10,7 +10,12 @@ jobs:
         - stage: tests
           name: "Unit Tests"
           script: npm run test-ci
-        - stage: deploy
-          if: (NOT type IN (pull_request)) AND (branch = master)
-          name: "Deploy to GitHub Pages"
-          script: npm run deploy
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: build/
+    keep-history: true
+    on:
+        branch: master
