@@ -9,6 +9,6 @@ jobs:
           name: "Unit Tests"
           script: npm run test-ci
         - stage: deploy
-          if: if: (NOT type IN (pull_request)) AND (branch = master)
+          if: (NOT type IN (pull_request)) AND (branch = master)
           name: "Deploy to GitHub Pages"
           script: npm run deploy
