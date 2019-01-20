@@ -1,0 +1,5 @@
+test/**/*.test.tsx
+--mode development
+--require jsdom-global/register
+--include test/test-setup.ts
+--colors

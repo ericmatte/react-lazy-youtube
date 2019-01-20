@@ -1,0 +1,96 @@
+@mixin rationKeeper() {
+    width: 100%;
+    position: relative; /* If you want text inside of it */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+
+    .ratio-keeper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}
+
+.react-lazy-youtube {
+    @include rationKeeper();
+
+    .youtube {
+        &__wrapper {
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        background-color: #000;
+        position: relative;
+        padding-top: 56.25%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            top: -16.82%;
+            opacity: 0.75;
+        }
+
+        &:hover {
+            .play-button {
+                opacity: 1;
+                background: rgb(255, 0, 0);
+            }
+        }
+
+        .play-button {
+            position: absolute;
+            width: 72px;
+            height: 54px;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            z-index: 1;
+
+            opacity: 0.8;
+            background: rgb(32, 32, 32);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 50% / 10%;
+            text-align: center;
+            transition: all 150ms ease-out;
+            &::before {
+                background: inherit;
+                border-radius: 5% / 50%;
+                bottom: 9%;
+                content: "";
+                left: -5%;
+                position: absolute;
+                right: -5%;
+                top: 9%;
+            }
+            &::after {
+                border-style: solid;
+                border-width: 1em 0 1em 1.732em;
+                border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+                content: " ";
+                font-size: 0.8em;
+                margin: -1em 0 0 -0.75em;
+                top: 50%;
+                position: absolute;
+            }
+        }
+
+        iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}

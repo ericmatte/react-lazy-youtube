@@ -1,0 +1,75 @@
+{
+    "name": "react-lazy-load",
+    "version": "0.1.0",
+    "description": "A simple React component to lazy load embedded YouTube videos",
+    "main": "dist/index.js",
+    "license": "MIT",
+    "author": "Eric Matte <ericmatte.inbox@gmail.com>",
+    "homepage": "https://ericmatte.github.io/react-lazy-youtube",
+    "bugs": {
+        "url": "https://github.com/ericmatte/react-lazy-youtube/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ericmatte/react-lazy-youtube.git"
+    },
+    "keywords": [
+        "react",
+        "youtube",
+        "player",
+        "react-component",
+        "lazy"
+    ],
+    "files": [
+        "dist",
+        "LICENSE",
+        "main.js"
+    ],
+    "types": "./dist/react-lazy-youtube.d.ts",
+    "scripts": {
+        "example": "webpack-dev-server --mode development",
+        "build": "webpack --mode production",
+        "test": "mocha-webpack --watch",
+        "test-ci": "mocha-webpack"
+    },
+    "peerDependencies": {
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/preset-react": "^7.0.0",
+        "@types/chai": "^4.1.7",
+        "@types/enzyme": "^3.1.15",
+        "@types/enzyme-adapter-react-16": "^1.0.3",
+        "@types/mocha": "^5.2.5",
+        "@types/react": "^16.0.0",
+        "@types/react-dom": "^16.0.0",
+        "awesome-typescript-loader": "^5.2.1",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.2.0",
+        "css-loader": "^2.1.0",
+        "enzyme": "^3.8.0",
+        "enzyme-adapter-react-16": "^1.7.1",
+        "file-loader": "^3.0.1",
+        "html-webpack-plugin": "^3.2.0",
+        "jsdom": "^13.1.0",
+        "mocha": "^5.2.0",
+        "mocha-webpack": "^2.0.0-beta.0",
+        "node-sass": "^4.11.0",
+        "react": "^16.0.0",
+        "react-addons-test-utils": "^15.6.2",
+        "react-dom": "^16.0.0",
+        "rimraf": "^2.6.3",
+        "sass-loader": "^7.1.0",
+        "shx": "^0.3.2",
+        "style-loader": "^0.23.1",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.12.1",
+        "typescript": "^3.2.2",
+        "webpack": "^4.28.4",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-server": "^3.1.14"
+    }
+}
