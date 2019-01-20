@@ -9,6 +9,6 @@ jobs:
           name: "Unit Tests"
           script: npm run test-ci
         - stage: deploy
-          name: "Deploy to GitHub Pages"
-          script: rnm run deploy
           if: branch = master
+          name: "Deploy to GitHub Pages"
+          script: npm run deploy
