@@ -1,3 +1,14 @@
 language: node_js
+
 node_js:
-  - "6.10.2"
+    - "6.10.2"
+
+jobs:
+    include:
+        - stage: tests
+          name: "Unit Tests"
+          script: ./test-ci
+        - stage: deploy
+          name: "Deploy to GitHub Pages"
+          script: ./deploy
+          if: branch = master
