@@ -7,6 +7,9 @@ node_js:
 
 jobs:
     include:
+        - stage: build
+          name: "Build project"
+          script: npm run build
         - stage: tests
           name: "Unit Tests"
           script: npm run test-ci
