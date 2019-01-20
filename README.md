@@ -1,3 +1,18 @@
+# Setup travis
+
+Create a separate repository for the website (optional). This will reduce the likelihood that you overwrite your main repository, and will keep output files from polluting it.
+
+Get a Personal Access Token under https://github.com/settings/tokens
+
+Only enable "public_repo" access for public repositories, "repo" for private.
+
+Save the token somewhere as you can only see it once.
+
+On the Travis settings for the repository https://travis-ci.org/<me>/<myrepo>/settings create an environment variable:
+
+GITHUB_API_KEY=<token>
+and make sure to mark "Display value in build log" as "Off".
+
 # react-youtube [![Build Status](https://travis-ci.org/troybetz/react-youtube.svg?branch=master)](https://travis-ci.org/troybetz/react-youtube)
 
 Simple [React](http://facebook.github.io/react/) component acting as a thin layer over the [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference)
