@@ -3,12 +3,15 @@ language: node_js
 node_js:
     - "6.10.2"
 
+stages:
+    - name: deploy
+      if: branch = master
+
 jobs:
     include:
         - stage: tests
           name: "Unit Tests"
           script: npm run test-ci
         - stage: deploy
-          if: branch = master
           name: "Deploy to GitHub Pages"
           script: npm run deploy
