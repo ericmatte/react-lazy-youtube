@@ -10,9 +10,9 @@ jobs:
         - stage: tests
           name: "Unit Tests"
           script: npm run test-ci
-        - stage: build
-          name: "Build project and deploy"
-          script: npm run build
+        - stage: github pages deploy
+          name: "Build example and deploy to GitHub Pages"
+          script: npm run build:example
           deploy:
               provider: pages
               skip-cleanup: true

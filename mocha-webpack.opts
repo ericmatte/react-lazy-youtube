@@ -1,5 +1,5 @@
 test/**/*.test.tsx
---mode development
+--webpack-env dev
 --require jsdom-global/register
 --include test/test-setup.ts
 --colors

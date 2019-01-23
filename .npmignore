@@ -1,7 +1,8 @@
 .vscode
 .*
 **/tsconfig.json
-**/webpack.config.js
+**/webpack.*.js
 
 node_modules
 src
+build

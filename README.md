@@ -1,3 +1,5 @@
+https://github.com/nobrainr/typescript-webpack-starter
+
 # Setup travis
 
 Create a separate repository for the website (optional). This will reduce the likelihood that you overwrite your main repository, and will keep output files from polluting it.

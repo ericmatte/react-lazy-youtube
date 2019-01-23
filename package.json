@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "A simple React component to lazy load embedded YouTube videos",
     "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "license": "MIT",
     "author": "Eric Matte <ericmatte.inbox@gmail.com>",
     "homepage": "https://ericmatte.github.io/react-lazy-youtube",
@@ -20,18 +21,13 @@
         "react-component",
         "lazy"
     ],
-    "files": [
-        "dist",
-        "LICENSE",
-        "main.js"
-    ],
-    "types": "./dist/react-lazy-youtube.d.ts",
     "scripts": {
-        "example": "webpack-dev-server --mode development",
-        "build": "webpack --mode production",
+        "example": "webpack-dev-server --env dev --open",
+        "build:example": "rimraf build && webpack --env dev",
+        "build:lib": "rimraf dist && webpack --env prod",
         "test": "mocha-webpack --watch",
         "test-ci": "mocha-webpack",
-        "predeploy": "npm run build",
+        "predeploy": "npm run build:example",
         "deploy": "gh-pages -d build"
     },
     "peerDependencies": {
@@ -51,7 +47,9 @@
         "awesome-typescript-loader": "^5.2.1",
         "babel-loader": "^8.0.5",
         "chai": "^4.2.0",
+        "clean-webpack-plugin": "^1.0.1",
         "css-loader": "^2.1.0",
+        "dts-bundle": "^0.7.3",
         "enzyme": "^3.8.0",
         "enzyme-adapter-react-16": "^1.7.1",
         "file-loader": "^3.0.1",
@@ -74,6 +72,7 @@
         "typescript": "^3.2.2",
         "webpack": "^4.28.4",
         "webpack-cli": "^3.2.1",
-        "webpack-dev-server": "^3.1.14"
+        "webpack-dev-server": "^3.1.14",
+        "webpack-merge": "^4.2.1"
     }
 }
